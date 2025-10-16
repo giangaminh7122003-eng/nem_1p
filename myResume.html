@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>履歷表 — 江阿男</title>
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+      --radius:12px; --maxw:900px;
+      font-family: Inter, "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff);color:#0f172a}
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:28px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 10px 30px rgba(15,23,42,0.08);overflow:hidden}
+    header{display:flex;gap:20px;padding:28px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
+    .name-block{flex:1}
+    h1{margin:0;font-size:22px}
+    p.role{margin:6px 0 0;color:var(--muted)}
+    .meta{display:flex;gap:12px;margin-top:10px;color:var(--muted);font-size:14px}
+
+    .content{display:grid;grid-template-columns:1fr 320px;gap:24px;padding:28px;border-top:1px solid #eef2ff}
+    .section{margin-bottom:18px}
+    h2{font-size:16px;margin:0 0 10px}
+    .muted{color:var(--muted);font-size:14px}
+    .edu-item, .exp-item{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:12px;border-radius:10px;margin-bottom:10px;border:1px solid #f0f6ff}
+    ul.skills{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills li{background:#f1f5f9;padding:6px 10px;border-radius:999px;font-size:13px}
+
+    aside{padding:16px;background:#fbfdff;border-left:1px solid #f0f6ff;border-radius:0 0 var(--radius) var(--radius)}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .actions{display:flex;gap:10px;padding:12px;border-top:1px solid #eef2ff}
+    button{border:0;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{background:transparent;border:1px solid #e6eefc}
+
+    @media (max-width:900px){.content{grid-template-columns:1fr;}.avatar{width:76px;height:76px}.wrap{margin:16px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" id="resume-card">
+      <header>
+        <div class="avatar" aria-hidden="true">江阿男</div>
+        <div class="name-block">
+          <h1 id="fullname">姓名: 江阿男</h1>
+          <p class="role" id="role">求職目標 / 申請科系 / 專長領域</p>
+          <div class="meta">
+            <div>學號: <strong id="student-id">AU114011123</strong></div>
+            <div class="small">所在地: Taipei, Taiwan</div>
+            <div class="small">Email: yourname@example.com</div>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56'><rect rx='10' width='56' height='56' fill='%232563eb'/><text x='28' y='34' font-size='18' fill='white' font-family='Arial' text-anchor='middle'>CV</text></svg>" alt="logo">
+        </div>
+      </header>
+
+      <div class="content">
+        <main>
+          <section class="section">
+            <h2>個人簡介</h2>
+            <p class="muted" id="summary">一段兩到三句話的自我介紹，提到你的背景、專長和職涯目標。例如：資工系學生，熟悉前端開發與資料結構，尋求實習機會以強化 full‑stack 能力。</p>
+          </section>
+
+          <section class="section">
+            <h2>經歷</h2>
+            <div class="exp-item">
+              <strong>實習 / 專案名稱</strong>
+              <div class="small">2024.07 — 2024.09</div>
+              <p class="muted">簡短描述你在此專案或公司負責的事情與成就，例如：使用 React 與 Node.js 完成一個任務管理系統，將搜尋速度提高 30%。</p>
+            </div>
+            <div class="exp-item">
+              <strong>校內社團 / 競賽</strong>
+              <div class="small">2023.01 — 2023.12</div>
+              <p class="muted">簡短描述參與角色與成果，例如：帶領團隊取得校內黑客松第二名，負責後端 API 設計。</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>教育</h2>
+            <div class="edu-item">
+              <strong>大學 — 學系</strong>
+              <div class="small">2021 — 2025（預計）</div>
+              <p class="muted">主修課程：資料結構、演算法、網頁程式設計、作業系統。</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>技能</h2>
+            <ul class="skills" id="skills-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+            </ul>
+          </section>
+
+        </main>
+
+        <aside>
+          <section class="section contact">
+            <h2>聯絡方式</h2>
+            <div class="small">電話: +886 9x xxx xxxx</div>
+            <div class="small">Email: <span id="email">yourname@example.com</span></div>
+            <div class="small">GitHub: github.com/yourname</div>
+            <div class="small">LinkedIn: linkedin.com/in/yourname</div>
+          </section>
+
+          <section class="section">
+            <h2>語言</h2>
+            <div class="small">中文（母語）</div>
+            <div class="small">英文（中等）</div>
+          </section>
+
+          <section class="section">
+            <h2>其他</h2>
+            <div class="small">可立即報到 / 可遠端工作 / 可提供作品集連結</div>
+          </section>
+        </aside>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" id="print-btn">列印 / 存成 PDF</button>
+        <button class="btn-outline" id="toggle-dark">切換深色模式</button>
+        <button class="btn-outline" id="download-btn">下載 HTML 檔</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('click', ()=>{
+      const el = document.documentElement;
+      if(!el.style.getPropertyValue('--bg') || el.style.getPropertyValue('--bg')===''){
+        document.documentElement.style.setProperty('--bg','#0b1220');
+        document.documentElement.style.setProperty('--card','#0b1220');
+        document.documentElement.style.setProperty('--muted','#9ca3af');
+        document.documentElement.style.setProperty('--accent','#7c3aed');
+        document.documentElement.style.setProperty('color','#e6eefc');
+        document.body.style.background = 'linear-gradient(180deg,#071025,#0b1220)';
+      } else {
+        document.documentElement.style.removeProperty('--bg');
+        document.documentElement.style.removeProperty('--card');
+        document.documentElement.style.removeProperty('--muted');
+        document.documentElement.style.removeProperty('--accent');
+        document.documentElement.style.removeProperty('color');
+        document.body.style.background = '';
+      }
+    });
+
+    document.getElementById('print-btn').addEventListener('click', ()=> window.print());
+
+    document.getElementById('download-btn').addEventListener('click', ()=>{
+      const doctype = '<!doctype html>\n';
+      const html = document.documentElement.outerHTML;
+      const blob = new Blob([doctype + html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'resume_Jiang_A_Nan.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('student-id').textContent = 'AU114011123';
+  </script>
+</body>
+</html>
